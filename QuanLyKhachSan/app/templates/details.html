@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+
+<div class="row cate">
+
+    <div class="col-md-7 col-sm-6">
+        <img src="{{ room.image }}" class="img-fluid" alt="{{ room.name }}"/>
+    </div>
+    <div class="col-md-5 col-sm-6">
+        <h2 class="text-center text-success">CHI TIẾT PHÒNG</h2>
+        <h2>{{ room.name }}</h2>
+        <h3 class="text-danger">{{ "{:,.1f}".format(room.price) }} VNĐ</h3>
+        <p>Phòng Có diện tích rộng rãi thoải mái, tất cả các phòng đều đảm bảo đạt tiêu chuẩn 5 sao.
+            Cửa sổ mở ra có thể ngắm nhìn thành phố và đồi núi xanh mướt.
+            Chúng tôi có nhiều loại phòng với nhiều mức giá hợp lý cho cá nhân, nhóm và gia đình.
+            Các phòng đều được trang bị đầy đủ tiện nghi với không gian rộng rãi thoải mái rất thích hợp cho bạn và gia đình nghỉ dưỡng.</p>
+        <input type="button" value="Đặt phòng"  class="btn btn-danger"/>
+    </div>
+</div>
+<hr class="cate">
+
+{% if current_user.is_authenticated %}
+<div class="form-group mt-2 cate">
+    <textarea class="form-control" id="comment-content" placeholder="Nội dung bình luận"></textarea>
+    <button onclick="addComment({{ room.id }})" class="btn btn-success mt-1">Thêm bình luận</button>
+</div>
+
+{% else %}
+<p class="cate">Vui lòng <a href="/login?next=/rooms/{{ room.id }}">đăng nhập</a> để bình luận</p>
+{% endif %}
+<div class="spinner-border text-primary my-spinner cates"></div>
+<ul  id="comments" class="list-group mt-2 cate">
+
+</ul>
+
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/details.js') }}"></script>
+<script>
+  window.onload = () => {
+    loadComments({{room.id}})
+  }
+
+</script>
+{% endblock %}

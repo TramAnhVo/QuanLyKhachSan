@@ -1,0 +1,79 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+    {% if err_msg %}
+    <div class="alert alert-danger">
+      {{ err_msg }}
+    </div>
+    {% endif %}
+
+    <div class="td3">
+      <div class="td31">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp">
+      </div>
+
+      <div class="td31 dk">
+        <h2 class="text-center text-success mt-6">THUÊ PHÒNG</h2>
+        <form method="post" enctype="multipart/form-data" action="/">
+            <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="name" required placeholder="Nhập họ tên..." name="name">
+              <label for="name">Họ tên</label>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="phone" required placeholder="Nhập số điện thoại..." name="phone">
+              <label for="phone">Số điện thoại</label>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="address" required placeholder="Nhập địa chỉ..." name="phone">
+              <label for="address">Địa chỉ</label>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="cccd" required placeholder="Nhập số căn cước công dân" name="cccd">
+              <label for="cccd">Căn cước công dân</label>
+            </div>
+
+            <div class="form-floating mt-3 mb-3">
+              <input type="date" class="form-control" required id="date-start" placeholder="Nhập mật khẩu" name="date-start">
+              <label for="date-start">Ngày thuê phòng</label>
+            </div>
+
+            <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="ma_phong" required placeholder="Nhập mã phòng" name="ma_phong">
+              <label for="ma_phong">Mã phòng</label>
+            </div>
+
+            <div class="form-floating mt-3 mb-3">
+                <span>Loại phòng:            </span><input type="checkbox" id="Checkbox_1" ><span>Phòng đơn</span><span>                      </span><input type="checkbox" id="Checkbox1" ><span>Phòng đôi</span>
+
+            </div>
+
+            <div class="form-floating mt-3 mb-3">
+                <span>Loại khách hàng:            </span><input type="checkbox" id="Checkbox" ><span>Khách nước ngoài</span>
+            </div>
+
+            <div class="td5">
+                <div class="form-floating td51">
+                <input type="submit" class="btn btn-danger ndn" value="Hủy" />
+                </div>
+
+                <div class="form-floating td52">
+                <input type="submit" class="btn btn-danger ndn" value="Thuê phòng" />
+                </div>
+            </div>
+
+        </form>
+
+
+      </div>
+    </div>
+
+{% else %}
+{% include 'login.html' %}
+{% endif %}
+
+{% endblock %}

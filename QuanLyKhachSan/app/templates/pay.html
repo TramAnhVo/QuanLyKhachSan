@@ -1,0 +1,68 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<h1 class="text-center text-success " style="margin:20px 0;">THANH TOÁN</h1>
+
+<div class="col-md-9 col-sm-9 container " >
+    <table class="table ">
+            <tr>
+                <th>Mã hóa đơn</th>
+                <th>Tên phòng</th>
+                <th>Giá phòng</th>
+                <th>Ngày thuê phòng</th>
+                <th>Số ngày thuê</th>
+                <th>Thành tiền</th>
+                <th> </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>101</td>
+                <td>100000 VNĐ</td>
+                <td>11/12/2022</td>
+                <td>2</td>
+                <td>200000</td>
+                <td>
+                    <input type="button" value="Thanh toán" onclick="Infopay()" class="btn btn-danger"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>105</td>
+                <td>200000 VNĐ</td>
+                <td>10/12/2022</td>
+                <td>3</td>
+                <td>600000</td>
+                <td>
+                    <input type="button" value="Thanh toán" onclick="Infopay()" class="btn btn-danger"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>104</td>
+                <td>100000 VNĐ</td>
+                <td>6/12/2022</td>
+                <td>6</td>
+                <td>600000</td>
+                <td>
+                    <input type="button" value="Thanh toán" onclick="Infopay()" class="btn btn-danger"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>101</td>
+                <td>200000 VNĐ</td>
+                <td>12/12/2022</td>
+                <td>1</td>
+                <td>200000</td>
+                <td>
+                    <input type="button" value="Thanh toán" onclick="Infopay()" class="btn btn-danger"/>
+                </td>
+            </tr>
+        </table>
+</div>
+
+{% endblock %}

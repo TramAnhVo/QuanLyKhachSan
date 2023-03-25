@@ -1,0 +1,195 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+    <div>
+        <a id="gototop" href="javascript:;"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+
+    <div class="nen_tong">
+    <img src="{{ url_for('static', filename='image/hinh_2.jpg') }}" alt="Nature" class="hinh_nen">
+    <div class="nen_trong">
+        <div class="chu_nen">
+            <h2 class="animate__animated animate__pulse">Khách sạn thượng lưu</h2>
+            <h1 class="animate__animated animate__zoomIn">Đặt phòng trong tích tắc</h1>
+        </div>
+        <div class="bieu_mau">
+            <form class="form-inline" action="/action_page.php">
+                <label for="email">Ngày nhận phòng:</label>
+                <input type="date" id="email" placeholder="Ngày nhận phòng..." name="email">
+                <label for="pwd">Ngày trả phòng:</label>
+                <input type="date" id="pwd" placeholder="Ngày trả phòng..." name="pswd">
+                <label for="pwd">Số lượng người:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="9">
+                <button type="submit" ><a class="search" href="/category">Tìm kiếm </a></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <section>
+        <div class="td4">
+            <div class="td41">
+                <img class="img-thumbnail" src="https://vcdn1-dulich.vnecdn.net/2022/07/29/hypat-1659069584-1659081355.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=ateHKAAnu32uybgAOx-emA">
+            </div>
+            <div class="td41">
+                <p>Đến với chúng tôi, bạn sẽ được  thư giãn và nghỉ ngơi để thoát khỏi mọi muộn phiền, bộn bề của cuộc sống, thăng hoa cảm xúc, những trải nghiệm tuyệt vời nhất chúng tôi đảm bảo rằng bạn sẽ không hối hận.
+                    Với Khách sạn mang đậm nét sang trọng, hòa quyện tinh tế cùng nội thất tiêu chuẩn và dịch vụ hoàn hảo, nơi đây hứa hẹn sẽ là điểm dừng chân lý tưởng để du khách thư giãn và khơi dậy mọi giác quan.</p>
+            </div>
+            <div class="td41">
+                <p>“Khi bạn vào phòng khách sạn, bạn khóa cửa và bạn biết có một bí mật, có một sự xa xỉ, có sự tưởng tượng.
+                    Có thoải mái. Có sự trấn an”</p>
+                <p>– Diane von Furstenberg</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+    <div class="td1">
+        <h4>DU LỊCH & NGHỈ DƯỠNG</h4>
+        <h2>Khách sạn lấy cảm hứng từ hệ sinh thái</h2>
+    </div>
+
+    <div class="item1">
+        <div class="items1">
+            <div class="room">
+                <img src="{{ url_for('static', filename='image/room1.jpg') }}">
+            </div>
+
+            <div class="label">
+                <p>Penthouse Suite</p>
+                <p><a href="#">Xem chi tiết</a></p>
+            </div>
+
+            <div class="label1">New</div>
+        </div>
+
+        <div class="items2">
+            <div class="item1a">
+                <div class="items1a">
+                <div class="room">
+                    <img src="{{ url_for('static', filename='image/room2.jpg') }}">
+                </div>
+
+                <div class="label">
+                    <p>Penthouse Suite</p>
+                    <p><a href="#">Xem chi tiết</a></p>
+                </div>
+
+                <div class="label1">New</div>
+            </div>
+
+                <div class="items1a">
+                <div class="room">
+                    <img src="{{ url_for('static', filename='image/room3.jpg') }}">
+                </div>
+
+                <div class="label">
+                    <p>Penthouse Suite</p>
+                    <p><a href="#">Xem chi tiết</a></p>
+                </div>
+
+                <div class="label1">New</div>
+            </div>
+            </div>
+
+            <div class="item1a">
+                <div class="items1a">
+                <div class="room">
+                    <img src="{{ url_for('static', filename='image/room4.jpg') }}">
+                </div>
+
+                <div class="label">
+                    <p>Penthouse Suite</p>
+                    <p><a href="#">Xem chi tiết</a></p>
+                </div>
+
+                <div class="label1">New</div>
+            </div>
+
+                <div class="items1a">
+                <div class="room">
+                    <img src="{{ url_for('static', filename='image/room5.jpg') }}">
+                </div>
+
+                <div class="label">
+                    <p>Penthouse Suite</p>
+                    <p><a href="#">Xem chi tiết</a></p>
+                </div>
+
+                <div class="label1">New</div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <section>
+        <div class="td1">
+            <h4>DU LỊCH & NGHỈ DƯỠNG</h4>
+            <h2>Khách sạn lấy cảm hứng từ hệ sinh thái</h2>
+        </div>
+
+        <div class="item">
+            <div class="items">
+                <p><i class="fa-sharp fa-solid fa-umbrella-beach"></i></p>
+                <p>Tiệc BBQ bãi biển</p>
+                <p>Quay trở lại bãi biển và nấu các công thức nấu ăn từ masterchef của chúng tôi.</p>
+            </div>
+
+            <div class="items">
+                <p><i class="fa-sharp fa-solid fa-martini-glass-citrus"></i></p>
+                <p>Bữa sáng buffet</p>
+                <p>Quay trở lại bãi biển và nấu các công thức nấu ăn từ masterchef của chúng tôi.</p>
+            </div>
+
+            <div class="items">
+                <p><i class="fa-sharp fa-solid fa-plane-up"></i></p>
+                <p>Tiện ích đa dạng</p>
+                <p>Quay trở lại bãi biển và nấu các công thức nấu ăn từ masterchef của chúng tôi.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="hinh_boi"
+         style=" background-image:url('{{ url_for('static', filename='image/pool.jpg') }}');
+             height:70vh">
+
+        <div class="td2">
+            <h1>Thưởng thức bơi lội và hơn thế nữa </h1>
+            <p>Từ lúc bạn bước vào, mọi cảm giác đều mời bạn thư giãn. Thực hiện một hành trình
+                khám phá và kết nối lại tâm trí, cơ thể và tinh thần - được hướng dẫn bởi các nhà
+                trị liệu Aman giàu kinh nghiệm của chúng tôi. Chúng tôi mong được chào đón bạn.</p>
+        </div>
+    </div>
+
+    <div class="text-white rounded end">
+  <p>Copyright © 2022 All Rights Reserved</p>
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+    <!-- go to top-->
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $("#gototop").hide()
+            $(window).scroll(function(){
+                if ( $(this).scrollTop() >= 50)
+                    $("#gototop").show("slow")
+                else
+                $("#gototop").hide("slow")
+
+            })
+
+            $("#gototop").click(function(){
+                $("html, body").animate({
+                    scrollTop:0
+                }, 1000);
+            })
+        })
+    </script>
+{% endblock%}
+
