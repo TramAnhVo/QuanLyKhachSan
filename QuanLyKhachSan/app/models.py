@@ -92,40 +92,40 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
 
-        # c1 = Category(name='Phòng đơn')
-        # c2 = Category(name = 'Phòng đôi')
-        #
-        # db.session.add(c1)
-        # db.session.add(c2)
-        #
-        # db.session.commit()
+        c1 = Category(name='Phòng đơn')
+        c2 = Category(name = 'Phòng đôi')
+        
+        db.session.add(c1)
+        db.session.add(c2)
+        
+        db.session.commit()
 
-        # p1 = Room(name='101', price=100000,image='https://images.pexels.com/photos/3209035/pexels-photo-3209035.jpeg',category_id=1)
-        # p2 = Room(name='102', price=100000,image='https://images.pexels.com/photos/271655/pexels-photo-271655.jpeg',category_id=1)
-        # p3 = Room(name='103', price=200000,image='https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg', category_id=2)
-        # p4 = Room(name='104', price=200000,image='https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg', category_id=2)
-        # p5 = Room(name='105', price=100000,image='https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg', category_id=1)
-        # p6 = Room(name='106', price=200000,image='https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg',category_id=2)
-        # p7 = Room(name='107', price=100000,image='https://images.pexels.com/photos/1571450/pexels-photo-1571450.jpeg', category_id=1)
-        # p8 = Room(name='108', price=200000,image='https://images.pexels.com/photos/2416932/pexels-photo-2416932.jpeg',category_id=2)
-        #
-        # db.session.add(p1)
-        # db.session.add(p2)
-        # db.session.add(p3)
-        # db.session.add(p4)
-        # db.session.add(p5)
-        # db.session.add(p6)
-        # db.session.add(p7)
-        # db.session.add(p8)
-        #
-        # db.session.commit()
+        p1 = Room(name='101', price=100000,image='https://images.pexels.com/photos/3209035/pexels-photo-3209035.jpeg',category_id=1)
+        p2 = Room(name='102', price=100000,image='https://images.pexels.com/photos/271655/pexels-photo-271655.jpeg',category_id=1)
+        p3 = Room(name='103', price=200000,image='https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg', category_id=2)
+        p4 = Room(name='104', price=200000,image='https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg', category_id=2)
+        p5 = Room(name='105', price=100000,image='https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg', category_id=1)
+        p6 = Room(name='106', price=200000,image='https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg',category_id=2)
+        p7 = Room(name='107', price=100000,image='https://images.pexels.com/photos/1571450/pexels-photo-1571450.jpeg', category_id=1)
+        p8 = Room(name='108', price=200000,image='https://images.pexels.com/photos/2416932/pexels-photo-2416932.jpeg',category_id=2)
+        
+        db.session.add(p1)
+        db.session.add(p2)
+        db.session.add(p3)
+        db.session.add(p4)
+        db.session.add(p5)
+        db.session.add(p6)
+        db.session.add(p7)
+        db.session.add(p8)
+        
+        db.session.commit()
 
-        # import hashlib
-        #
-        # password = str(hashlib.md5("123456".strip().encode('utf-8')).hexdigest())
-        # u1 = User(name='admin', username='admin', password=password,
-        #           avatar='https://res.cloudinary.com/dfhexl1gh/image/upload/v1667869523/cld-sample-2.jpg',
-        #           user_role=UserRoleEnum.ADMIN)
-        #
-        # db.session.add(u1)
-        # db.session.commit()
+        import hashlib
+        
+        password = str(hashlib.md5("123456".strip().encode('utf-8')).hexdigest())
+        u1 = User(name='admin', username='admin', password=password,
+                  avatar='https://res.cloudinary.com/dfhexl1gh/image/upload/v1667869523/cld-sample-2.jpg',
+                  user_role=UserRoleEnum.ADMIN)
+        
+        db.session.add(u1)
+        db.session.commit()
